@@ -1,6 +1,6 @@
 ![logo](GongSolutions.Wpf.DragDrop.Full.png)
 
-#Introduction
+## Introduction
 
 [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/punker76/gong-wpf-dragdrop?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
@@ -12,7 +12,7 @@
 
 The **GongSolutions.WPF.DragDrop** library is a drag'n'drop framework for WPF.
 
-The original source is from http://code.google.com/p/gong-wpf-dragdrop (but this git repository is now the main source).
+The original source is from https://code.google.com/archive/p/gong-wpf-dragdrop (but this git repository is now the main source).
 
 It has the following features:
 
@@ -24,14 +24,19 @@ It has the following features:
 + Can display Adorners to give the user visual feedback of the operation in progress.
 + Has sensible defaults so that you have to write less code for common operations.
 
-#Installation
+## Want to say thanks?
+ * Hit the :star: Star :star: button
+ * If you feel like you’d like to make some kind of contribution it would be gratefully received.  
+ <a href='https://pledgie.com/campaigns/31030'><img alt='Click here to lend your support to: GongSolutions.WPF.DragDrop and MahApps.Metro and make a donation at pledgie.com !' src='https://pledgie.com/campaigns/31030.png?skin_name=chrome' border='0' ></a>
+
+## Installation
 
 You can download or fork the source code and compile it.  
-Or: Get the latest version via NuGet: [https://nuget.org/packages/gong-wpf-dragdrop](https://nuget.org/packages/gong-wpf-dragdrop/)
+Or: Get the latest version via NuGet: [https://www.nuget.org/packages/gong-wpf-dragdrop](https://www.nuget.org/packages/gong-wpf-dragdrop/)
 
-#Release History
+## Release History
 
-+ **1.0.0** (tba Nov/Dec 2015)
++ **1.0.0** (tba 2016)
 	- [#107](https://github.com/punker76/gong-wpf-dragdrop/pull/107), [#108](https://github.com/punker76/gong-wpf-dragdrop/pull/108): Fixed Group insertion adorner
 	- [#116](https://github.com/punker76/gong-wpf-dragdrop/issues/116), [#117](https://github.com/punker76/gong-wpf-dragdrop/pull/117): Fixed weird behavior of Drag Adorner when dragging to window border
 	- [#118](https://github.com/punker76/gong-wpf-dragdrop/pull/118): Added HitTest4Type for ButtonBase (@toengi)
@@ -58,8 +63,10 @@ Or: Get the latest version via NuGet: [https://nuget.org/packages/gong-wpf-dragd
 	- SHA: b73562542356e93b32d93c56396fc6d7dd5170c1 Minor drop insertion fix with RightToLeft flow direction.
 	- [#143](https://github.com/punker76/gong-wpf-dragdrop/pull/143): Allow target adorners on non-ItemsControls (@emsaks)
 	- [#139](https://github.com/punker76/gong-wpf-dragdrop/issues/139): Fixed COMException error when dragging over Skype: Provide new method `TryCatchOccurredException` in `IDragSource` to handle exceptions (thx to @Antonyo)
+	- [#161](https://github.com/punker76/gong-wpf-dragdrop/pull/161) Make DefaultDragHandler.CanStartDrag virtual (@Hinidu)
+	- [#172](https://github.com/punker76/gong-wpf-dragdrop/issues/172) Fix DragAdorner cliping last right and bottom pixels [#173](https://github.com/punker76/gong-wpf-dragdrop/pull/173) (@andrewst)
 + **0.1.4.1** (20 June, 2014), **0.1.4.3** (11 Aug, 2014)
-	- [#102](https://github.com/punker76/gong-wpf-dragdrop/pull/102): All assemblies in Nuget Package 0.1.4 are compiled against v4 runtime.
+	- [#102](https://github.com/punker76/gong-wpf-dragdrop/issues/102): All assemblies in Nuget Package 0.1.4 are compiled against v4 runtime.
 + **0.1.4** (30 May, 2014)
 	- [#80](https://github.com/punker76/gong-wpf-dragdrop/pull/80): Handle non-collection targets (DefaultDropHandler was trying to dereference null when the drop target
 wasn't a collection).
@@ -72,11 +79,11 @@ wasn't a collection).
 	- [#97](https://github.com/punker76/gong-wpf-dragdrop/issues/97): Highlight adorner not outlining everything. (PR #99)
 	- [#98](https://github.com/punker76/gong-wpf-dragdrop/issues/98): Assembly is not signed.
 + **0.1.3.11** (14 Oct, 2013)
-	- Issue [#73](https://github.com/punker76/gong-wpf-dragdrop/issues/73): Fix crash on click inside ItemsControl where ItemsSource.Count == 0.
-	- Issue [#76](https://github.com/punker76/gong-wpf-dragdrop/issues/76): Allowed drops to main window where the visual parent would be null.
-	- Issue [#77](https://github.com/punker76/gong-wpf-dragdrop/issues/77): Extended IDragSource for drag cancellation.
-	- Issue [#78](https://github.com/punker76/gong-wpf-dragdrop/issues/78): Fix default drag adorner with right to left option.
-	- Issue [#79](https://github.com/punker76/gong-wpf-dragdrop/issues/79): Add Property "SourceIndex" also to IDragInfo (same as in IDropInfo).
+	- Issue [#73](https://github.com/punker76/gong-wpf-dragdrop/pull/73): Fix crash on click inside ItemsControl where ItemsSource.Count == 0.
+	- Issue [#76](https://github.com/punker76/gong-wpf-dragdrop/pull/76): Allowed drops to main window where the visual parent would be null.
+	- Issue [#77](https://github.com/punker76/gong-wpf-dragdrop/pull/77): Extended IDragSource for drag cancellation.
+	- Issue [#78](https://github.com/punker76/gong-wpf-dragdrop/pull/78): Fix default drag adorner with right to left option.
+	- Issue [#79](https://github.com/punker76/gong-wpf-dragdrop/pull/79): Add Property "SourceIndex" also to IDragInfo (same as in IDropInfo).
 + **0.1.3.10** (11 Aug, 2013)
 	- minor change to default insertion adorner (bigger triangle size)
 	- nuget package for NET 3.5 should be working (DataGrid)
@@ -99,7 +106,7 @@ wasn't a collection).
 	- Issue [#37](https://github.com/punker76/gong-wpf-dragdrop/issues/37), Issue [#12](https://github.com/punker76/gong-wpf-dragdrop/issues/12):
 		- Slider in list item can't be changed. DD thinks the list item is being dragged.
 		- Text box on a list item: when I try to select the text by doing a drag selection the list item starts to be dragged.
-	- Issue [#63](https://github.com/punker76/gong-wpf-dragdrop/issues/63): Multiple items deselected in ListView and other subclasses of ListBox. thx to [rdingwall](https://github.com/rdingwall) (Richard Dingwall)
+	- Issue [#63](https://github.com/punker76/gong-wpf-dragdrop/pull/63): Multiple items deselected in ListView and other subclasses of ListBox. thx to [rdingwall](https://github.com/rdingwall) (Richard Dingwall)
 		- Fixed over-strict IsAssignableFrom, was causing bug where ListViews and other subclasses of ListBox would lose their selections if multiple items were selected.
 	- Issue [#15](https://github.com/punker76/gong-wpf-dragdrop/issues/15): A drop target can now be placed on a child element of a grid, listbox or something else (more mvvm like). The NotHandled property can be used to allow bubbling the drag over event.
 	- Issue [#64](https://github.com/punker76/gong-wpf-dragdrop/issues/64): Now it's possible to use ItemsControl itself as drag source and drop target.
@@ -142,7 +149,7 @@ wasn't a collection).
 	- Issue #46: Added a KeyStates property to the DropInfo class.
 	- Issue #40 make DefaultDropHandler and some methods public
 + **0.1.3.3** (16 Feb, 2013)
-	- Fix Issue [34](http://code.google.com/p/gong-wpf-dragdrop/issues/detail?id=34): Error with HitTestScrollBar thx to [rdingwall](https://github.com/rdingwall) (Richard Dingwall)
+	- Fix Issue [34](https://code.google.com/archive/p/gong-wpf-dragdrop/issues/34): Error with HitTestScrollBar thx to [rdingwall](https://github.com/rdingwall) (Richard Dingwall)
 	- Fix for possible exception: Unable to cast object of type 'System.Windows.Documents.Run' to type 'System.Windows.UIElement'. thx to [rdingwall](https://github.com/rdingwall) (Richard Dingwall)
 + **0.1.3.2** (15 Feb, 2013)
 	- add icon url and license url for nuget package
@@ -177,9 +184,9 @@ wasn't a collection).
 + **0.1.0** (11 Nov, 2009)
 	- Initial Release.
 
-#Examples
+# Examples
 
-###Default Behaviour
+## Default Behaviour
 
 A simple example of adding drag/drop to a ListBox:
 
@@ -193,7 +200,7 @@ Setting the IsDragSource and IsDropTarget attached propeties to True on an Items
 
 If your project contains another ItemsControl with drag/drop enabled in this manner, and it is bound to a collection of the same type, then items can also be dragged and dropped between the controls.
 
-###Adding a Drop Handler
+## Adding a Drop Handler
 
 While the defaults can be useful in simple cases, you will usually want more control of what happens when data is dragged/dropped onto your control. You can delegate that responsibility to your ViewModel by setting the DropHandler attached property:
 
@@ -243,7 +250,7 @@ For more information, check out the full [DropHandlerExample](Examples).
 
 # License
 
-### BSD 3-Clause License
+## BSD 3-Clause License
 
 Copyright (c) 2015, Jan Karger (Steven Kirk)  
 All rights reserved.  
