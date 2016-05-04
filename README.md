@@ -26,8 +26,6 @@ It has the following features:
 
 ## Want to say thanks?
  * Hit the :star: Star :star: button
- * If you feel like you’d like to make some kind of contribution it would be gratefully received.  
- <a href='https://pledgie.com/campaigns/31030'><img alt='Click here to lend your support to: GongSolutions.WPF.DragDrop and MahApps.Metro and make a donation at pledgie.com !' src='https://pledgie.com/campaigns/31030.png?skin_name=chrome' border='0' ></a>
 
 ## Installation
 
@@ -65,6 +63,7 @@ Or: Get the latest version via NuGet: [https://www.nuget.org/packages/gong-wpf-d
 	- [#139](https://github.com/punker76/gong-wpf-dragdrop/issues/139): Fixed COMException error when dragging over Skype: Provide new method `TryCatchOccurredException` in `IDragSource` to handle exceptions (thx to @Antonyo)
 	- [#161](https://github.com/punker76/gong-wpf-dragdrop/pull/161) Make DefaultDragHandler.CanStartDrag virtual (@Hinidu)
 	- [#172](https://github.com/punker76/gong-wpf-dragdrop/issues/172) Fix DragAdorner cliping last right and bottom pixels [#173](https://github.com/punker76/gong-wpf-dragdrop/pull/173) (@andrewst)
+	- [#162](https://github.com/punker76/gong-wpf-dragdrop/issues/162) Fix for copy functionallity [#164](https://github.com/punker76/gong-wpf-dragdrop/pull/164)
 + **0.1.4.1** (20 June, 2014), **0.1.4.3** (11 Aug, 2014)
 	- [#102](https://github.com/punker76/gong-wpf-dragdrop/issues/102): All assemblies in Nuget Package 0.1.4 are compiled against v4 runtime.
 + **0.1.4** (30 May, 2014)
