@@ -1,45 +1,42 @@
 # http://www.appveyor.com/docs/appveyor-yml
 
-# configuration for dev
--
-  branches:
-    only:
-      - dev
+# configuration for develop/CI and master/Release branch
 
-  version: 1.1.0-alpha{build}
-  pull_requests:
-    do_not_increment_build_number: true
-  skip_tags: true
-  image: Visual Studio 2015
-  configuration: Release
+branches:
+  only:
+    - dev
+    - master
 
-  platform: Any CPU
+environment:
+  azure-key-vault-url:
+    secure: 1mKS/HfCVq+iYNRVSrrN8NEowOkKt3knrpMzw+SOy3g=
+  azure-key-vault-client-id:
+    secure: JfSqzmsJdXB6uIxttCRoQw1NygwxqXHDj9uIqQnWOb9VCnQYlRPlAnxgW0yTSX4b
+  azure-key-vault-client-secret:
+    secure: CUpRJxMLeUZwNPMcqI0wECaWfy5AMnWn1UZhBd9WnQ3Z16lJP1Vzrkf24mccbhUD
+  azure-key-vault-certificate:
+    secure: BSPdW2TgnQtoQXXbeDECug==
 
-  build_script:
-  - ps: .\Build\build.ps1 -Script .\Build\build.cake -Target AppveyorDev
+skip_tags: true
+image: Visual Studio 2019
+test: off
 
-  artifacts:
-  - path: Build\gong-wpf-dragdrop.*.nupkg
-  - path: Build\Showcase.WPF.DragDrop.*.zip
+install:
+  - cinst dotnetcore-sdk --version=3.1.100
 
-# configuration for master
--
-  branches:
-    only:
-      - master
+pull_requests:
+  do_not_increment_build_number: false
 
-  version: 1.1.0.0
-  pull_requests:
-    do_not_increment_build_number: true
-  skip_tags: true
-  image: Visual Studio 2015
-  configuration: Release
+build_script:
+  - ps: .\build.ps1 --bootstrap
+  - ps: .\build.ps1 -target appveyor
 
-  platform: Any CPU
+artifacts:
+  - path: \Publish\*.*
 
-  build_script:
-  - ps: .\Build\build.ps1 -Script .\Build\build.cake -Target Appveyor
+nuget:
+  disable_publish_on_pr: true
 
-  artifacts:
-  - path: Build\gong-wpf-dragdrop.*.nupkg
-  - path: Build\Showcase.WPF.DragDrop.*.zip
+skip_commits:
+  files:
+    - '**/*.md'
