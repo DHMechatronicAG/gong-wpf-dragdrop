@@ -652,7 +652,7 @@ namespace GongSolutions.Wpf.DragDrop
                                     DragDropPreview?.Move(getPosition(DragDropPreview.PlacementTarget));
                                 }
 
-                                MouseHelper.HookMouseMove(point =>
+                                MouseHelper.HookMouseMove(dragHandler, point =>
                                     {
                                         if (DragDropPreview?.PlacementTarget != null)
                                         {
